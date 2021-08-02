@@ -2,16 +2,12 @@
 # from termcolor import colored
 import os
 import sys
+from termcolor import colored
 from socket import gethostbyname, inet_aton
 from .Profile_Conf import DEF_SHELL_PATH
 
 
-def colored(text, col):
-    return text
-    
-
 def check_py_version():
-    print("[+] Checking your python version. . .")
     py_version = sys.version_info[0]
     if py_version != 3:
         print("[-] Python 3.x is required.")
@@ -20,23 +16,21 @@ def check_py_version():
     else:
         os.system("clear")
 
+
 def generate_shell():
     name = input("NAME> ")
     while name == "":
-        print("[-] You can't let it empty :(")
         name = input("NAME> ")
 
     host = input("RHOST> ")
     while len(host) < 1:
-        print("[-] You can't let it empty :(")
         host = input("RHOST> ")
-    check_host(host)
+    host = check_host(host)
 
     port = input("PORT> ")
     while len(port) <1:
-        print("[-] You can't let it empty :(")
         port = input("PORT> ")
-    check_port(int(port))
+    port = check_port(int(port))
 
     with open(os.path.dirname(__file__) + "/shell.py", "r+") as source:
         content = source.read()
@@ -52,8 +46,6 @@ def generate_shell():
         print(colored("[!] Unexpected Error", "red"))
         exit(0)
 
-def ls_connections():
-    pass
 
 def check_host(host):
     ALPHA = "bcdefghijklmnopqrstuvwxyz"
@@ -63,7 +55,7 @@ def check_host(host):
         except:
             print(colored("[-] Invlaid DDNS server name!", "red"))
             exit(0)
-    else:  # we have an IP address here.
+    else:
         try:
             if inet_aton(host):
                 return host

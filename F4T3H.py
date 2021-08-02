@@ -19,7 +19,7 @@ def main():
         if command == "":
             continue
 
-        elif command == "gen-shell":
+        elif command == "new-shell":
             generate_shell()
 
 

