@@ -1,4 +1,4 @@
-# F4T3H-C2
+# F4T3H-WinC2 (inprogress)
 
 ## What is this?
  F4T3H-C2 is a simple HTTP-Reversed-Shell in python3, It has been developed for educational purposes only and the author is not responsible for any misuse.

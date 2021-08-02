@@ -1,20 +1,10 @@
 
 # from termcolor import colored
 import os
-import sys
 from termcolor import colored
 from socket import gethostbyname, inet_aton
 from .Profile_Conf import DEF_SHELL_PATH
 
-
-def check_py_version():
-    py_version = sys.version_info[0]
-    if py_version != 3:
-        print("[-] Python 3.x is required.")
-        print("[-] Run it with python3")
-        exit()
-    else:
-        os.system("clear")
 
 
 def generate_shell():
@@ -35,7 +25,7 @@ def generate_shell():
     with open(os.path.dirname(__file__) + "/shell.py", "r+") as source:
         content = source.read()
     content = content.replace("XHOST", host)
-    content = content.replace("XPORT", port)
+    content = content.replace("XPORT", str(port))
 
     path = DEF_SHELL_PATH + f"{name}.py"
     with open(path, "w") as shell:

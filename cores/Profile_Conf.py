@@ -7,7 +7,7 @@ DEF_SHELL_PATH = f"/home/{getuser()}/Desktop/"
 #
 SENDING_PATH = ""
 #
-TOOL_COMMAND_STATEMENT = colored("F4T3H> ", "red")
+TOOL_COMMAND_STATEMENT = colored("F4T3H> ", "green")
 #
 SHELL_STATEMENT = "F4T3H()> "
 #

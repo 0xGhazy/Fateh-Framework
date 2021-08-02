@@ -2,9 +2,7 @@
 import os
 import sys
 from cores.Profile_Conf import DESKTOP_PATH
-def colored(text, col):
-    return text
-
+from termcolor import colored
 
 host = "YourIPAddressHere"
 port = 8080
@@ -48,5 +46,4 @@ def main():
     check_py_version()
     start_server(host, port)
 
-if __name__ == '__main__':
-    main()
+main()
