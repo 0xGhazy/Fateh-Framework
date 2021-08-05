@@ -6,11 +6,9 @@ import uuid
 import json
 import socket
 import random
-import shutil
 import getpass
 import requests
 import platform
-import pyautogui
 import subprocess
 
 

@@ -1,23 +1,27 @@
 
-# from termcolor import colored
+from termcolor import colored
 import os
 from termcolor import colored
 from socket import gethostbyname, inet_aton
-from .Profile_Conf import DEF_SHELL_PATH
-
-
+from .Configurations import DEF_SHELL_PATH
 
 def generate_shell():
     name = input("NAME> ")
+    if name == "end":
+        return
     while name == "":
         name = input("NAME> ")
 
     host = input("RHOST> ")
+    if host == "end":
+        return
     while len(host) < 1:
         host = input("RHOST> ")
     host = check_host(host)
 
     port = input("PORT> ")
+    if port == "end":
+        return
     while len(port) <1:
         port = input("PORT> ")
     port = check_port(int(port))
@@ -35,7 +39,6 @@ def generate_shell():
     else:
         print(colored("[!] Unexpected Error", "red"))
         exit(0)
-
 
 def check_host(host):
     ALPHA = "bcdefghijklmnopqrstuvwxyz"
@@ -63,3 +66,5 @@ def check_port(port):
     except ValueError:
         print(colored("[-] Port number must ne integer number", "red"))
         exit(0)
+
+

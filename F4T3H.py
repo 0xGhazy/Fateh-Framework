@@ -4,33 +4,48 @@ import sys
 from os import system
 from termcolor import colored
 from cores.HTTPHandler import HTTPHandler
-from cores.Data import banner
-from cores.Functions import check_host, check_port
-from cores.Functions import generate_shell
-from cores.help_manager import help_man
-from cores.Profile_Conf import TOOL_COMMAND_STATEMENT
+from cores.help_manager import help_man, banner
+from cores.Functions import check_host, check_port, generate_shell
+
+
+
+# Normal terminal
+TOOL_TERMINAL = colored("F4T3H> ", "green")
+
+
+
+
+
+
 
 
 def check_py_version():
     py_version = sys.version_info[0]
     if py_version != 3:
-        print("[-] Python 3.x is required.")
-        print("[-] Run it with python3")
+        print(colored("[-] Python 3.x is required.", "red"))
+        print(colored("[-] Run it with python3", "red"))
         exit()
     else:
-        system("cls")
+        system("clear")
 
 
 def main():
-    system("cls")
+    system("clear")
     check_py_version()
     banner()
     
     while True:
-        command = input(f"{TOOL_COMMAND_STATEMENT}")
-        if command == "" or int(command) < 0 or int(command) > 4:
-            print(colored("~_~", "red"))
+        try:
+            command = input(TOOL_TERMINAL)
+            if int(command) < 0 or int(command) > 4:
+                print(colored("~_~", "red"))
+        except ValueError:
+            pass
 
+        if command == "":
+            print(colored("~_~", "red"))
+            
+                
         elif command == "new" or command == "1":
             generate_shell()
 
@@ -50,9 +65,6 @@ def main():
 
         else:
             system(command)
-
-
-
 
 
 if __name__ == '__main__':

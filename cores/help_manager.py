@@ -2,21 +2,41 @@
 from termcolor import colored
 from os import system
 
-def print_usage(statement):
-    print(colored(f"\033[1m{statement}\n", "blue"))
+def banner():
+    print(colored(f"""\033[1m
+     ___ _ _ _____ _____  _   __      ___      ___ ___ 
+    | __| | |_   _|__ / || |__\ \    / (_)_ _ / __|_  )
+    | _||_  _|| |  |_ \ __ |___\ \/\/ /| | ' \ (__ / / By:{colored("0xGhazy", "red")}\033[93m\033[1m
+    |_|   |_| |_| |___/_||_|    \_/\_/ |_|_||_\___/___|\n
+    > Script Options:        > Description
+    -----------------        -------------
+    [1] new                  - Generating a new Shell.
+    [2] ls-conn              - List all incoming connections/sessions.
+    [3] listening            - Starting shell session.
+    [4] help                 - Help man.
+    [0] exit                 - Exit this awesome tool :(\n""", "yellow"))
 
+
+
+
+def print_usage(statement):
+    print(colored(f"{statement}\n", "blue"))
 
 
 def send_usage():
     s = """
     send <FILE_URL>
-    send http://127.0.0.1:8080/my_photo.jpg
     you can get this link by using uploadServer.py
+    Example: \033[1msend http://127.0.0.1:8080/myPhoto.jpg
     """
     print_usage(s)
 
+
 def get_usage():
-    s = ""
+    print_usage("""
+
+
+    """)
 
 
 
