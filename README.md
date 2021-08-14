@@ -23,18 +23,18 @@ Until then, you can follow my blog via the following link: [0xGHAZY](https://0xg
 
 
 # 2. F4T3H-WinC2 Shell Features
-01- Persistence.
-02- Geographical ip information.
-03- Port scanning.
-04- Navigation system.
-05- Sending files to the client machine.
-06- Downloading files from the client machine.
-07- Taking screenshots.
-08- Getting plaintext files content. 
-09- Getting system information.
-10- Command execution.
-11- Calculating files MD5 hash value.
-12- Compiled to exe %100 work.
+- Persistence.
+- Geographical ip information.
+- Port scanning.
+- Navigation system.
+- Sending files to the client machine.
+- Downloading files from the client machine.
+- Taking screenshots.
+- Getting plaintext files content. 
+- Getting system information.
+- Command execution.
+- Calculating files MD5 hash value.
+- Compiled to exe %100 work.
 
 
 # 3. Installation
