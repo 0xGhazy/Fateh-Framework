@@ -1,0 +1,4 @@
+termcolor
+requests
+geocoder
+folium

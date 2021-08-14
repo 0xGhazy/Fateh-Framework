@@ -1,1 +1,84 @@
-# F4T3H-WinC2 (inprogress)
+
+
+<!-- Photo Here -->
+<div align="center">
+
+![ayyamsyria net-2018-05-03_18-23-04_170735](https://user-images.githubusercontent.com/60070427/129279029-ad0428a0-1e38-4809-b012-91f43d2f36fb.jpg)
+# THE GREAT CROW IS BACK
+</div>
+
+<!-- Badges -->
+<div align="center">
+
+[![forthebadge](https://forthebadge.com/images/badges/made-with-python.svg)](https://forthebadge.com) [![forthebadge](https://forthebadge.com/images/badges/open-source.svg)](https://forthebadge.com)
+
+</div>
+
+# 1. About `F4T3H-WinC2`
+`F4T3H-WinC2` is a free, open-source tool targeting `Windows-systems` Based on HTTP reversed shell.
+This tool helps you to generate Fully UnDetectable (FUD) HTTP reversed shell With many features that you will find mentioned below.
+that was programmed primarily for educational and self-challenging purpose. Any misuse of the tool, the author is not responsible for it.
+I will write a full post about using this tool, I promise to cover all its aspects and how to take full advantage of it to ensure the best results.
+Until then, you can follow my blog via the following link: [0xGHAZY](https://0xghazy.wordpress.com/)
+
+
+# 2. F4T3H-WinC2 Shell Features
+01- Persistence.
+02- Geographical ip information.
+03- Port scanning.
+04- Navigation system.
+05- Sending files to the client machine.
+06- Downloading files from the client machine.
+07- Taking screenshots.
+08- Getting plaintext files content. 
+09- Getting system information.
+10- Command execution.
+11- Calculating files MD5 hash value.
+12- Compiled to exe %100 work.
+
+
+# 3. Installation
+
+#### 3.1. Clone this repo.
+
+`git clone https://github.com/0xGhazy/F4T3H-WinC2`
+
+#### 3.2. Installing required python3 libs.
+`pip3 install -r req.txt `
+
+#### 3.3. Installing `NOIP` (Optionally) 
+here you will find the noip installation guide
+`https://www.noip.com/support/knowledgebase/installing-the-linux-dynamic-update-client/`
+
+
+
+# 4. Want to Contribute?
+    [+] Note
+
+    If you encounter any problem running the tool, please do not hesitate and let me know.
+    By opening an Issue in the repo you make me aware of to improve the tool for you <3.
+
+1- Forking a Repo
+2- Cloning a Repo
+3- Open a new issue and wait until the approvement
+4- Creating Pull request - [How to create a Pull Request](https://towardsdatascience.com/getting-started-with-git-and-github-6fcd0f2d4ac6)
+
+
+
+# 5. To-Do list:
+- [ ] Supporting multi clients.
+- [ ] Supporting metasploit modules.
+- [ ] Make `UploadServer.py` file runs from `F4T3H.py.`
+- [ ] Update list dir to be walk method.
+- [ ] Adding HTTPS.
+- [ ] improve `conf.py` file.
+- [ ] Adding vulnerability scanner.
+
+
+
+# 6. Acknowledgments
+    Thank you guys for helping me through the journey of writing this tool.
+    HaBiba El-Sayed
+    Sameh Elisha
+    Ghada Salah
+___
