@@ -14,7 +14,7 @@
 
 </div>
 
-# 1. About `F4T3H-WinC2`
+# 1. About `F4T3H-WinC2` (Beta) Version
 `F4T3H-WinC2` is a free, open-source tool targeting `Windows-systems` Based on HTTP reversed shell.
 This tool helps you to generate Fully UnDetectable (FUD) HTTP reversed shell With many features that you will find mentioned below.
 that was programmed primarily for educational and self-challenging purpose. Any misuse of the tool, the author is not responsible for it.
