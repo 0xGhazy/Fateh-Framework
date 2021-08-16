@@ -80,5 +80,5 @@ here you will find the noip installation guide
     Thank you guys for helping me through the journey of writing this tool.
     HaBiba El-Sayed
     Sameh Elisha
-    Ghada Salah
+    Ghada Saleh
 ___
