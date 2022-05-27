@@ -2,6 +2,8 @@ import http.server
 from os import system
 import cgi
 from termcolor import colored
+
+## remove the following 
 from Configurations import DESKTOP_PATH
 from helper import help_handeler
 from Functions import*
