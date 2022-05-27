@@ -63,22 +63,3 @@ here you will find the noip installation guide
 3- Open a new issue and wait until the approvement
 4- Creating Pull request - [How to create a Pull Request](https://towardsdatascience.com/getting-started-with-git-and-github-6fcd0f2d4ac6)
 
-
-
-# 5. To-Do list:
-- [ ] Supporting multi clients.
-- [ ] Supporting metasploit modules.
-- [ ] Make `UploadServer.py` file runs from `F4T3H.py.`
-- [ ] Update list dir to be walk method.
-- [ ] Adding HTTPS.
-- [ ] improve `conf.py` file.
-- [ ] Adding vulnerability scanner.
-
-
-
-# 6. Acknowledgments
-    Thank you guys for helping me through the journey of writing this tool.
-    HaBiba El-Sayed
-    Sameh Elisha
-    Ghada Saleh
-___
