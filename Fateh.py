@@ -4,6 +4,7 @@ from cores.tool_data import banner, CommandModes, main_help
 from cores.shell_generator import ShellGenerator
 from cores.autocompleter import CommandCompleter
 from cores.functions import checking_requirements, ip_lookup
+from cores.connection_handler import Handler
 import os
 
 class Fateh:
@@ -34,6 +35,17 @@ class Fateh:
 
                 elif command == "exit" or command == "0":
                     exit(0)
+
+                elif "start_listener" in command:
+                    command = command.replace("start_listener", "").strip().split()
+                    if len(command) == 3:
+                        s_type, host, port = command
+                        Handler(s_type, host, int(port))
+                    else:
+                        print(colored("""
+                        [-] You must enter 3 values ex:
+                        start_listener tcp 127.0.0.1 8080
+                        """, "red"))
 
                 elif "cd" in command:
                     _, directory = command.split(" ")
